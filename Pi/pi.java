@@ -13,7 +13,7 @@ public class pi{
 	public static double calcPi2(int n){
 		double Pi = 0;
 		for (int i = 0; i < n; i ++){
-			if(i%2 !=0){
+			if(i%2 !=0){    //奇数
 				Pi -= 1.0/(2*i + 1);
 				}
 			else{
@@ -32,4 +32,4 @@ public class pi{
 	
 }
 
-//求pi  pi = 1 - 1 / 3 + 1 / 5 - 1 / 7 + 1 / 9-...
+//求pi  1/4 pi = 1 - 1 / 3 + 1 / 5 - 1 / 7 + 1 / 9-...

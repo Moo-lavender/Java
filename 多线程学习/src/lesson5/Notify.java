@@ -11,9 +11,10 @@ public class Notify {
                    try {
                        for (int j = 0; j < 10; j++) {
                           synchronized (Notify.class){
-                             while (COUNT+3 > 100){//为了再被唤醒后因为存量更改而再次判断是否满足生产条件
+                             while (COUNT+3 > 100){
+								 //为了再被唤醒后因为存量更改而再次判断是否满足生产条件
                                  //当前线程释放锁，阻塞并等待其它线程唤醒调用notify或者notifyAll唤醒
-                                  Notify.class.wait();//???会不会好几个堵在这？？
+                                  Notify.class.wait();
                               }
                               produce();
                               System.out.println(Thread.currentThread().getName() + "生产，库存总量为"+COUNT);

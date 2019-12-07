@@ -11,7 +11,7 @@
 转换为10进制数就是：167773121，即该IP地址转换后的数字就是它了。
 */
 import java.util.Scanner;
-public class TransIP{
+public class TransIPAndInt{
     public static void main(String[] args)
     {
         Scanner in=new Scanner(System.in);

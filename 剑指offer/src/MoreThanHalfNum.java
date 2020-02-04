@@ -1,6 +1,19 @@
 //数组中出现次数大于一半的数字
 public class MoreThanHalfNum{
-	public int moreThanHalfNum_Solution(int [] array) {
+	public int MoreThanHalfNum_Solution1(int [] array) {
+        int [] counts = new int[10];
+        int halfLength = array.length / 2;
+        for (int i = 0; i < array.length; i ++){
+            counts[array[i]] ++;
+        }
+        for (int i = 0; i < counts.length; i ++){
+            if (counts[i] > halfLength){
+                return i;
+            }
+        }
+        return 0;
+    }
+	public int moreThanHalfNum_Solution2(int [] array) {
 		   if (array == null || array.length ==0) {
 			   return 0;
 		   }
@@ -25,4 +38,5 @@ public class MoreThanHalfNum{
 	 
 		   return 0;
 	}
+	
 }

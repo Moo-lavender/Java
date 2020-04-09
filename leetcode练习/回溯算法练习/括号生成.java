@@ -32,6 +32,7 @@ class Solution {
         return ans;
     }
     private void backtrack(int left,int right,StringBuilder s) {
+		//剩余的右括号小于左括号 则说明无法构成
         if (right < left) {
             return;
         }
